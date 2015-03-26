@@ -17,10 +17,14 @@ if !has("signs")
  finish
 endif
 
-if &bg == "dark"
- highlight SignColor ctermfg=white ctermbg=blue guifg=white guibg=RoyalBlue3
-else
- highlight SignColor ctermbg=white ctermfg=blue guibg=grey guifg=RoyalBlue3
+if g:colors_name == "monokai"
+  highlight SignColor ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#3c3d37 gui=NONE
+else 
+  if &bg == "dark"
+    highlight SignColor ctermfg=white ctermbg=blue guifg=white guibg=RoyalBlue3
+  else
+    highlight SignColor ctermbg=white ctermfg=blue guibg=grey guifg=RoyalBlue3
+  endif
 endif
 
 " ---------------------------------------------------------------------
